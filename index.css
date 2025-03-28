@@ -1,0 +1,122 @@
+.backweb {
+  background-image: url("https://cdn.pixabay.com/photo/2022/02/07/15/43/mountains-6999713_1280.jpg");
+  background-size: cover;  /* ปรับให้รูปครอบคลุมทั้งหน้าจอ */
+  background-position: center;  /* จัดให้อยู่ตรงกลาง */
+  background-repeat: no-repeat;  /* ไม่ให้รูปซ้ำ */
+  background-attachment: fixed;  /* ให้รูปอยู่กับที่เวลาสกอลล์ */
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* สีดำโปร่งแสง */
+  backdrop-filter: blur(1px); /* เพิ่มเบลอเพื่อให้ดูโปร่งแสง */
+}
+
+.swiper-container {
+  width: 80%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.747);
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image {
+  width: 100%; /* ปรับให้เต็ม container */
+  max-width: 300px; /* จำกัดความกว้างสูงสุด */
+  height: auto; /* ให้สัดส่วนคงที่ */
+  border-radius: 10px; /* ทำให้ขอบมน */
+}
+
+.image-title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+.text {
+  margin-bottom: 35px;
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+/*test.jsx*/
+.radio-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.radio-container input {
+  display: none; /* ซ่อน radio button */
+}
+
+.radio-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border: 2px solid #ccc;
+  box-shadow: inset 4px 4px 6px #d1d1d1, inset -4px -4px 6px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.radio-check::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.radio-container.active .radio-check {
+  border-color: #0d6efd;
+  box-shadow: inset 2px 2px 4px #0b5ed7, inset -2px -2px 4px #6ea8fe;
+}
+
+.radio-container.active .radio-check::after {
+  opacity: 1;
+}
+/**/
+
